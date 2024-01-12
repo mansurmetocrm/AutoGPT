@@ -102,11 +102,11 @@ class ForgeAgent(Agent):
     # Extract the ability from the answer
         ability = answer["ability"]
 
-        LOG.info(ability)
+        LOG.info(ability["name"])
 
     # Run the ability and get the output
     # We don't actually use the output in this example
-        output = await self.abilities.run_action(
+        output = await self.abilities.run_action    (
             task_id, ability["name"], **ability["args"]
         )
 
